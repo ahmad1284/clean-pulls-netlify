@@ -1,0 +1,130 @@
+---
+layout: base.njk
+title: "Pool Service Conditions | Clean Pools"
+description: "Service access conditions and requirements for Clean Pools Zanzibar pool maintenance operations."
+permalink: /tomancond/index.html
+eleventyExcludeFromCollections: true
+---
+
+<div class="pt-32 pb-24 px-6 max-w-3xl mx-auto">
+
+    <div class="mb-12">
+        <h1 class="text-4xl font-bold text-sky-900 mb-4">Pool Service Conditions</h1>
+        <p class="text-slate-600 text-sm">Last updated: January 2025 &mdash; Kiembe Samaki, Zanzibar</p>
+    </div>
+
+    <div class="prose space-y-10 text-slate-700">
+
+        <section class="bg-white p-8 rounded-2xl border border-sky-100 shadow-sm">
+            <h2 class="text-xl font-bold text-sky-900 mb-4">1. Safety Requirements</h2>
+            <p class="text-sm leading-relaxed mb-3">All technicians must comply with the Clean Pools safety framework before entering any service site. Personal protective equipment (PPE) including chemical-resistant gloves and eye protection is mandatory when handling water treatment compounds.</p>
+            <p class="text-sm leading-relaxed">Pool areas must be vacated of guests for a minimum of 30 minutes following chemical treatment. Technicians are responsible for posting appropriate signage during and after treatment sessions.</p>
+        </section>
+
+        <section class="bg-white p-8 rounded-2xl border border-sky-100 shadow-sm">
+            <h2 class="text-xl font-bold text-sky-900 mb-4">2. Equipment Standards</h2>
+            <p class="text-sm leading-relaxed mb-3">All equipment used on site must be cleaned and sanitised between service locations. Cross-contamination between pools is a serious risk — brushes, vacuum heads, and hoses are to be treated as site-specific unless sterilised to protocol.</p>
+            <p class="text-sm leading-relaxed">Digital water testing kits must be calibrated monthly. Paper strip testing is not approved for reporting purposes.</p>
+        </section>
+
+        <section class="bg-white p-8 rounded-2xl border border-sky-100 shadow-sm">
+            <h2 class="text-xl font-bold text-sky-900 mb-4">3. Chemical Handling &amp; Storage</h2>
+            <p class="text-sm leading-relaxed mb-3">Chlorine, stabiliser, and pH adjustment compounds must be stored in approved sealed containers and transported in the designated chemical compartment of service vehicles. Mixing of incompatible chemicals is strictly prohibited.</p>
+            <p class="text-sm leading-relaxed">All chemical applications must be logged in the service report with quantities, concentrations, and post-application test readings.</p>
+        </section>
+
+        <section class="bg-white p-8 rounded-2xl border border-sky-100 shadow-sm">
+            <h2 class="text-xl font-bold text-sky-900 mb-4">4. Reporting Obligations</h2>
+            <p class="text-sm leading-relaxed mb-3">Service reports must be submitted via the staff portal within 2 hours of job completion. Reports must include photo documentation of pre- and post-service pool conditions, water test results, and any equipment anomalies noted.</p>
+            <p class="text-sm leading-relaxed">Incidents involving chemical spills, equipment failure, or guest contact must be reported to the operations manager immediately.</p>
+        </section>
+
+        <section class="bg-white p-8 rounded-2xl border border-sky-100 shadow-sm">
+            <h2 class="text-xl font-bold text-sky-900 mb-4">5. Client Property &amp; Conduct</h2>
+            <p class="text-sm leading-relaxed mb-3">Technicians must conduct themselves professionally at all times on client premises. Use of client facilities is prohibited. All gates, doors, and access points used during a service must be secured upon departure.</p>
+            <p class="text-sm leading-relaxed">Any damage to client property must be reported immediately regardless of perceived severity.</p>
+        </section>
+
+    </div>
+
+    <!-- Staff Portal — subtle, no obvious "Admin Login" label -->
+    <div class="mt-20 pt-10 border-t border-slate-200">
+        <p class="text-xs text-slate-400 uppercase tracking-widest mb-6">Technician &amp; Operations Staff</p>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 max-w-sm">
+            <h2 class="text-base font-bold text-slate-700 mb-1">Staff Portal Access</h2>
+            <p class="text-xs text-slate-500 mb-6">Operations dashboard for authorised personnel only.</p>
+
+            <form id="staff-login-form" novalidate>
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-slate-600 mb-2" for="staff-password">Access Code</label>
+                    <input
+                        id="staff-password"
+                        name="password"
+                        type="password"
+                        class="w-full px-4 py-3 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-sky-600 focus:ring-1 focus:ring-sky-600"
+                        placeholder="Enter access code"
+                        autocomplete="current-password"
+                        required
+                    />
+                </div>
+
+                <div id="login-error" class="hidden mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-700" role="alert"></div>
+
+                <button
+                    type="submit"
+                    id="login-btn"
+                    class="w-full py-3 bg-sky-900 text-white text-sm font-bold rounded-lg hover:bg-sky-800 transition-colors"
+                >
+                    Access Portal
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+(function () {
+    var form = document.getElementById('staff-login-form');
+    var errorBox = document.getElementById('login-error');
+    var btn = document.getElementById('login-btn');
+
+    if (sessionStorage.getItem('admin_token')) {
+        window.location.replace('/admin');
+        return;
+    }
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        errorBox.classList.add('hidden');
+        btn.disabled = true;
+        btn.textContent = 'Verifying…';
+
+        var password = document.getElementById('staff-password').value;
+
+        try {
+            var res = await fetch('/api/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password: password })
+            });
+            var data = await res.json();
+
+            if (res.ok && data.token) {
+                sessionStorage.setItem('admin_token', data.token);
+                window.location.replace('/admin');
+            } else {
+                errorBox.textContent = data.error || 'Invalid access code.';
+                errorBox.classList.remove('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Access Portal';
+            }
+        } catch (err) {
+            errorBox.textContent = 'Network error. Please try again.';
+            errorBox.classList.remove('hidden');
+            btn.disabled = false;
+            btn.textContent = 'Access Portal';
+        }
+    });
+})();
+</script>

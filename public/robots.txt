@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /tomancond
+Disallow: /api/
+
+Sitemap: https://cleanpools.co.tz/sitemap.xml
