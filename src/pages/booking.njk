@@ -16,7 +16,7 @@ permalink: /booking.html
         <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -z-10 -translate-y-1/2"></div>
         {% for step in [1, 2, 3, 4] %}
         <div class="flex flex-col items-center gap-2 bg-white px-4">
-            <div class="w-10 h-10 rounded-full border-2 flex items-center justify-center {{ 'bg-sky-600 text-white border-sky-600' if step == 1 else 'border-slate-300 text-slate-400 bg-white' }}">{{ step }}</div>
+            <div class="w-10 h-10 rounded-full border-2 flex items-center justify-center {{ 'bg-sky-700 text-white border-sky-700' if step == 1 else 'border-slate-300 text-slate-400 bg-white' }}">{{ step }}</div>
             <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">{{ ["Size", "Service", "Schedule", "Contact"][step-1] }}</span>
         </div>
         {% endfor %}
@@ -29,7 +29,7 @@ permalink: /booking.html
             <!-- Step 1: Select Pool Size -->
             <section class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100">
                 <h2 class="text-xl font-bold text-sky-900 mb-6 flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sky-600">straighten</span>
+                    <span class="material-symbols-outlined text-sky-700">straighten</span>
                     1. Select Pool Size
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -40,8 +40,8 @@ permalink: /booking.html
                     ] %}
                     <label class="relative group cursor-pointer">
                         <input {{ 'checked' if size.checked }} class="peer sr-only" name="pool_size" type="radio"/>
-                        <div class="p-6 border-2 border-slate-100 rounded-2xl text-center transition-all peer-checked:border-sky-600 peer-checked:bg-sky-50 hover:border-sky-200">
-                            <span class="material-symbols-outlined text-4xl mb-2 text-sky-600">{{ size.icon }}</span>
+                        <div class="p-6 border-2 border-slate-100 rounded-2xl text-center transition-all peer-checked:border-sky-700 peer-checked:bg-sky-50 hover:border-sky-200">
+                            <span class="material-symbols-outlined text-4xl mb-2 text-sky-700">{{ size.icon }}</span>
                             <div class="font-bold text-sky-900">{{ size.label }}</div>
                             <div class="text-xs text-slate-700">{{ size.desc }}</div>
                         </div>
@@ -53,7 +53,7 @@ permalink: /booking.html
             <!-- Step 2: Choose Service Type -->
             <section class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100">
                 <h2 class="text-xl font-bold text-sky-900 mb-6 flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sky-600">cleaning_services</span>
+                    <span class="material-symbols-outlined text-sky-700">cleaning_services</span>
                     2. Choose Service Type
                 </h2>
                 <div class="space-y-4">
@@ -63,12 +63,12 @@ permalink: /booking.html
                         { name: "Equipment Repair", desc: "Pump, heater, or light diagnostics and fixing.", price: "Quote" }
                     ] %}
                     <label class="flex items-center gap-4 p-6 border border-slate-100 rounded-2xl cursor-pointer hover:bg-sky-50 transition-colors group">
-                        <input {{ 'checked' if service.checked }} class="w-5 h-5 text-sky-600 focus:ring-sky-600 border-slate-300" name="service_type" type="radio"/>
+                        <input {{ 'checked' if service.checked }} class="w-5 h-5 text-sky-700 focus:ring-sky-600 border-slate-300" name="service_type" type="radio"/>
                         <div class="flex-1">
                             <div class="font-bold text-sky-900">{{ service.name }}</div>
                             <div class="text-sm text-slate-700">{{ service.desc }}</div>
                         </div>
-                        <div class="text-sky-600 font-bold">${{ service.price }}</div>
+                        <div class="text-sky-700 font-bold">${{ service.price }}</div>
                     </label>
                     {% endfor %}
                 </div>
@@ -77,17 +77,17 @@ permalink: /booking.html
             <!-- Step 3: Schedule Date & Time -->
             <section class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100">
                 <h2 class="text-xl font-bold text-sky-900 mb-6 flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sky-600">calendar_month</span>
+                    <span class="material-symbols-outlined text-sky-700">calendar_month</span>
                     3. Schedule Date &amp; Time
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-bold text-sky-900 mb-2">Preferred Date</label>
-                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-600 focus:ring-sky-600" type="date"/>
+                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-700 focus:ring-sky-600" type="date"/>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-sky-900 mb-2">Preferred Window</label>
-                        <select class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-600 focus:ring-sky-600">
+                        <select class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-700 focus:ring-sky-600">
                             <option>Morning (8:00 AM - 12:00 PM)</option>
                             <option>Afternoon (12:00 PM - 4:00 PM)</option>
                             <option>Evening (4:00 PM - 7:00 PM)</option>
@@ -99,25 +99,25 @@ permalink: /booking.html
             <!-- Step 4: Contact Details -->
             <section class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100">
                 <h2 class="text-xl font-bold text-sky-900 mb-6 flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sky-600">person_pin_circle</span>
+                    <span class="material-symbols-outlined text-sky-700">person_pin_circle</span>
                     4. Contact Details
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div class="sm:col-span-2">
                         <label class="block text-sm font-bold text-sky-900 mb-2">Full Name</label>
-                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-600 focus:ring-sky-600" placeholder="John Doe" type="text"/>
+                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-700 focus:ring-sky-600" placeholder="John Doe" type="text"/>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-sky-900 mb-2">Email Address</label>
-                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-600 focus:ring-sky-600" placeholder="john@example.com" type="email"/>
+                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-700 focus:ring-sky-600" placeholder="john@example.com" type="email"/>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-sky-900 mb-2">Phone Number</label>
-                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-600 focus:ring-sky-600" placeholder="+255 123 456 789" type="tel"/>
+                        <input class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-700 focus:ring-sky-600" placeholder="+255 123 456 789" type="tel"/>
                     </div>
                     <div class="sm:col-span-2">
                         <label class="block text-sm font-bold text-sky-900 mb-2">Service Address</label>
-                        <textarea class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-600 focus:ring-sky-600" placeholder="Street name, villa number, area..." rows="3"></textarea>
+                        <textarea class="w-full p-4 border border-slate-200 rounded-xl focus:border-sky-700 focus:ring-sky-600" placeholder="Street name, villa number, area..." rows="3"></textarea>
                     </div>
                 </div>
             </section>
@@ -153,7 +153,7 @@ permalink: /booking.html
                         </div>
                         <div class="flex justify-between pt-2">
                             <span class="text-xl font-bold text-sky-900">Total</span>
-                            <span class="text-xl font-bold text-sky-600">$162.00</span>
+                            <span class="text-xl font-bold text-sky-700">$162.00</span>
                         </div>
                     </div>
                 </div>

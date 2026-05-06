@@ -8,7 +8,7 @@ permalink: /index.html
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
-        {% image "./src/assets/img/hero.jpg", "A luxurious, crystal-clear infinity pool overlooking the turquoise waters of the Zanzibar coast at sunset.", "100vw" %}
+        {% image "./src/assets/img/hero.jpg", "A luxurious, crystal-clear infinity pool overlooking the turquoise waters of the Zanzibar coast at sunset.", "100vw", "eager", "high" %}
         <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-10 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -25,13 +25,13 @@ permalink: /index.html
             </p>
             <div class="flex gap-4">
                 <a href="/booking" class="px-8 py-4 bg-sky-900 text-white font-bold rounded-xl shadow-lg hover:bg-sky-800 transition-all">Book Your Cleaning</a>
-                <button class="px-8 py-4 border-2 border-sky-600 text-sky-600 font-bold rounded-xl hover:bg-sky-50 transition-all">View Our Work</button>
+                <button class="px-8 py-4 border-2 border-sky-700 text-sky-700 font-bold rounded-xl hover:bg-sky-50 transition-all">View Our Work</button>
             </div>
         </div>
         <div class="hidden md:block">
             <div class="bg-white/40 backdrop-blur-xl border border-white/50 p-8 rounded-3xl shadow-2xl space-y-6">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+                    <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center text-sky-700">
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
                     </div>
                     <div>
@@ -42,14 +42,14 @@ permalink: /index.html
                 <div class="space-y-4">
                     <div class="flex justify-between items-center text-sm font-medium">
                         <span>pH Balance</span>
-                        <span class="text-sky-600 font-bold">7.4 pH</span>
+                        <span class="text-sky-700 font-bold">7.4 pH</span>
                     </div>
                     <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
                         <div class="h-full w-[74%] bg-sky-500"></div>
                     </div>
                     <div class="flex justify-between items-center text-sm font-medium">
                         <span>Chlorine</span>
-                        <span class="text-sky-600 font-bold">2.5 ppm</span>
+                        <span class="text-sky-700 font-bold">2.5 ppm</span>
                     </div>
                     <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
                         <div class="h-full w-[60%] bg-sky-500"></div>
@@ -73,11 +73,11 @@ permalink: /index.html
                 </div>
                 <div class="grid grid-cols-2 gap-8 mt-12">
                     <div>
-                        <div class="text-5xl text-sky-600 font-bold">100%</div>
+                        <div class="text-5xl text-sky-700 font-bold">100%</div>
                         <div class="text-sm uppercase tracking-wider text-slate-700 font-bold mt-2">Local Team</div>
                     </div>
                     <div>
-                        <div class="text-5xl text-sky-600 font-bold">24h</div>
+                        <div class="text-5xl text-sky-700 font-bold">24h</div>
                         <div class="text-sm uppercase tracking-wider text-slate-700 font-bold mt-2">Response Time</div>
                     </div>
                 </div>
@@ -104,14 +104,14 @@ permalink: /index.html
         ] %}
 
         {% for plan in plans %}
-        <div class="p-8 rounded-3xl border {{ 'border-sky-600 bg-sky-50 shadow-2xl relative transform -translate-y-4' if plan.featured else 'border-slate-200 hover:border-sky-300 bg-white transition-all' }} group">
-            {% if plan.featured %}<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-sky-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Most Popular</div>{% endif %}
+        <div class="p-8 rounded-3xl border {{ 'border-sky-700 bg-sky-50 shadow-2xl relative transform -translate-y-4' if plan.featured else 'border-slate-200 hover:border-sky-300 bg-white transition-all' }} group">
+            {% if plan.featured %}<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-sky-700 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Most Popular</div>{% endif %}
             <div class="text-sky-900 font-bold mb-2">{{ plan.name }}</div>
             <div class="text-5xl font-bold text-sky-900 mb-6">${{ plan.price }}<span class="text-sm font-normal text-slate-700">/mo</span></div>
             <ul class="space-y-4 mb-8 text-left">
                 {% for feature in plan.features %}
                 <li class="flex items-center gap-3 text-sm text-slate-700">
-                    <span class="material-symbols-outlined text-sky-600">check_circle</span>
+                    <span class="material-symbols-outlined text-sky-700">check_circle</span>
                     {{ feature }}
                 </li>
                 {% endfor %}

@@ -2,7 +2,7 @@ const htmlmin = require("html-minifier-terser");
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
 
-async function imageShortcode(src, alt, sizes = "100vw") {
+async function imageShortcode(src, alt, sizes = "100vw", loading = "lazy", fetchpriority = "auto") {
   let metadata = await Image(src, {
     widths: [300, 600, 1200],
     formats: ["avif", "webp", "jpeg"],
@@ -18,14 +18,24 @@ async function imageShortcode(src, alt, sizes = "100vw") {
   let imageAttributes = {
     alt,
     sizes,
-    loading: "lazy",
+    loading,
     decoding: "async",
+    fetchpriority
   };
 
   return Image.generateHTML(metadata, imageAttributes);
 }
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return code; // already minified
+  });
+
+  eleventyConfig.addShortcode("readFile", function(filePath) {
+    const fs = require("fs");
+    return fs.readFileSync(filePath, "utf8");
+  });
+
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   eleventyConfig.addPassthroughCopy({ "src/assets/css/style.css": "assets/css/style.css" });
