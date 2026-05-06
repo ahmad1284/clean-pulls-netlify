@@ -259,7 +259,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.5",
     "@11ty/eleventy-img": "^6.0.4",
-    "html-minifier-terser": "^7.2.0"
+    "html-minifier-terser": "^7.2.0",
+    "purify-css": "^1.2.5"
   },
   "scripts": {
     "build:eleventy": "./node_modules/.bin/eleventy",
