@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "npm install && ./node_modules/.bin/tailwindcss -i ./src/input.css -o ./public/output.css --minify"
+  command = "npm run build"
 
 [[headers]]
   for = "/*"
