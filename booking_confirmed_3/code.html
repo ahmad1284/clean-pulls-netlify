@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Confirmed | Clean Pools Zanzibar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-container": "#003941",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "secondary": "#00677d",
+                        "on-tertiary-container": "#56a7b5",
+                        "tertiary-fixed-dim": "#83d3e1",
+                        "on-secondary-container": "#005c70",
+                        "secondary-container": "#50d9fe",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-container": "#799dd6",
+                        "on-tertiary-fixed": "#001f24",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-dim": "#d8dadc",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#b3ebff",
+                        "on-tertiary-fixed-variant": "#004f59",
+                        "on-secondary-fixed": "#001f27",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "primary-container": "#003366",
+                        "surface-container-high": "#e6e8ea",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed": "#9feffe",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#3a5f94",
+                        "tertiary": "#002227",
+                        "on-secondary-fixed-variant": "#004e5f",
+                        "inverse-primary": "#a7c8ff",
+                        "outline": "#737780",
+                        "on-primary-fixed": "#001b3c",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c3c6d1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#43474f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#4cd6fb",
+                        "surface-container": "#eceef0",
+                        "on-surface": "#191c1e",
+                        "primary": "#001e40",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-low": "#f2f4f6",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "container-max": "1280px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "lg": "48px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "caption": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+<!-- TopNavBar (Shell Suppression: Not suppressed for confirmation as user needs return home/dashboard path) -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-sky-100/50 shadow-[0_4px_20px_rgba(0,51,102,0.05)]">
+<div class="flex justify-between items-center w-full px-10 py-4 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] font-medium">
+<div class="text-xl font-bold tracking-tight text-sky-900 uppercase">CLEAN POOLS</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-sky-800 transition-colors duration-200" href="#">Home</a>
+<a class="text-slate-600 hover:text-sky-800 transition-colors duration-200" href="#">Services</a>
+<a class="text-slate-600 hover:text-sky-800 transition-colors duration-200" href="#">Pricing</a>
+<a class="text-slate-600 hover:text-sky-800 transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="px-6 py-2 bg-primary-container text-on-primary font-bold rounded-lg scale-95 active:scale-100 transition-transform">Book Now</button>
+<button class="text-sky-900 font-semibold hover:bg-sky-50 px-3 py-2 rounded-lg transition-colors duration-200">Admin Login</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-20 px-6 sm:px-10 max-w-7xl mx-auto w-full">
+<!-- Success Banner -->
+<section class="text-center mb-16">
+<div class="inline-flex items-center justify-center w-20 h-20 bg-secondary-fixed rounded-full mb-6 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-on-secondary-fixed" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Your pool is on its way to pristine!</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Thank you for choosing Clean Pools. Our specialized team is ready to bring crystal-clear perfection back to your water.</p>
+</section>
+<!-- Bento Grid Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Booking Details Card -->
+<div class="md:col-span-2 bg-white rounded-xl p-md border border-sky-100 shadow-[0_4px_20px_rgba(0,51,102,0.05)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-sky-900">Booking Summary</h2>
+<span class="px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-label-md font-label-md rounded-full">Confirmed</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="p-3 bg-sky-50 rounded-lg">
+<span class="material-symbols-outlined text-sky-700" data-icon="pool">pool</span>
+</div>
+<div>
+<p class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Service Type</p>
+<p class="font-body-md text-body-md text-primary font-semibold">Premium Maintenance &amp; pH Balance</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-sky-50 rounded-lg">
+<span class="material-symbols-outlined text-sky-700" data-icon="calendar_today">calendar_today</span>
+</div>
+<div>
+<p class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Scheduled Date</p>
+<p class="font-body-md text-body-md text-primary font-semibold">Friday, October 24, 2024</p>
+<p class="text-caption font-caption text-on-surface-variant">Arrival window: 09:00 AM - 11:00 AM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-sky-50 rounded-lg">
+<span class="material-symbols-outlined text-sky-700" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Location</p>
+<p class="font-body-md text-body-md text-primary font-semibold">Kiembe Samaki, Zanzibar City</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col sm:flex-row gap-4">
+<button class="flex-1 py-4 bg-primary-container text-on-primary font-headline-md text-body-md rounded-lg hover:brightness-110 active:scale-[0.98] transition-all">View My Dashboard</button>
+<button class="flex-1 py-4 border-2 border-secondary text-secondary font-headline-md text-body-md rounded-lg hover:bg-sky-50 active:scale-[0.98] transition-all">Return Home</button>
+</div>
+</div>
+<!-- Side Card: Map/Location Visual -->
+<div class="bg-white rounded-xl border border-sky-100 shadow-[0_4px_20px_rgba(0,51,102,0.05)] overflow-hidden flex flex-col">
+<div class="h-64 bg-slate-200 relative">
+<img alt="Location Map View" class="w-full h-full object-cover grayscale-[0.2]" data-alt="A cinematic, high-angle aerial photograph of the Kiembe Samaki neighborhood in Zanzibar, featuring lush tropical greenery and the vibrant turquoise waters of the Indian Ocean in the background. The lighting is warm afternoon sun, creating high-contrast shadows and a premium, travel-inspired aesthetic. The overall color palette is dominated by aquatic blues, emerald greens, and soft sandy whites, emphasizing the island's pristine beauty." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcYsPVMlOAU3MNoUvfHOXRA1L_rKoD2TvxLkOFiG_TB8LumsUhzZ_9EBUPM9_Bk-LWu2TPssdKXmHh2emqwzwGqFY4MDkEgfdDklVFu4cvMcLp-C6Wti8C_TAg_6qtA4fT1UURVrBqMD0AELxtMoNpMJEY8GD5BJRoVDyE2X5oDQ0r6zPcFbat8G3drHFk8W3jmai2puv17ZAPWOaRyvJ9wdWb4F_-5DP0bO-TNShWxFS-jjTXVpdfZhTzjU6P0s_vHfUUd9vMNqM"/>
+<div class="absolute inset-0 bg-sky-900/10 mix-blend-multiply"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg animate-pulse">
+<span class="material-symbols-outlined text-primary" data-icon="location_on" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-body-lg text-sky-900 mb-2">Service Area</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Our technicians are currently in the Kiembe Samaki district. You will receive a notification when the team is 15 minutes away from your property.</p>
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+<span class="text-caption font-caption text-on-surface-variant uppercase tracking-wide">Ref ID</span>
+<span class="font-label-md text-label-md text-primary">#CP-99421-ZNZ</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Helpful Resources (Secondary Bento Row) -->
+<div class="mt-gutter grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex items-center p-md bg-sky-50 rounded-xl border border-sky-100 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center mr-4 shrink-0">
+<span class="material-symbols-outlined text-sky-700 text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-sky-900">Pool Care Guide</h4>
+<p class="text-body-md text-on-surface-variant">Learn how to maintain water clarity between our professional visits.</p>
+</div>
+</div>
+<div class="flex items-center p-md bg-white rounded-xl border border-sky-100 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 bg-sky-50 rounded-lg flex items-center justify-center mr-4 shrink-0">
+<span class="material-symbols-outlined text-sky-700 text-3xl" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-sky-900">Need Assistance?</h4>
+<p class="text-body-md text-on-surface-variant">Speak with our Zanzibar-based support team about your booking.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-sky-900 text-white font-['Plus_Jakarta_Sans'] text-sm border-t border-sky-800 mt-auto">
+<div class="w-full px-10 py-12 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-lg font-bold text-sky-200 mb-2 uppercase">CLEAN POOLS</div>
+<p class="text-sky-100/70 text-center md:text-left">© 2024 Clean Pools Zanzibar. Pristine Professionalism.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="text-sky-100/70 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-sky-100/70 hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-sky-100/70 hover:text-white transition-colors" href="#">Pool Maintenance Guide</a>
+<a class="text-sky-100/70 hover:text-white transition-colors" href="#">Location</a>
+</nav>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-sky-200 hover:text-white cursor-pointer" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-sky-200 hover:text-white cursor-pointer" data-icon="instagram">camera</span>
+</div>
+</div>
+</footer>
+</body></html>
