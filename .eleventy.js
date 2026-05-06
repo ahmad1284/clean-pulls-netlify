@@ -2,7 +2,7 @@ const htmlmin = require("html-minifier-terser");
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
 
-async function imageShortcode(src, alt, sizes = "100vw", loading = "lazy", fetchpriority = "auto") {
+async function imageShortcode(src, alt, sizes = "100vw", loading = "lazy", fetchpriority = "auto", imgClass = "") {
   let metadata = await Image(src, {
     widths: [300, 600, 1200],
     formats: ["avif", "webp", "jpeg"],
@@ -23,6 +23,10 @@ async function imageShortcode(src, alt, sizes = "100vw", loading = "lazy", fetch
     fetchpriority
   };
 
+  if (imgClass) {
+    imageAttributes.class = imgClass;
+  }
+
   return Image.generateHTML(metadata, imageAttributes);
 }
 
@@ -40,7 +44,9 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/assets/css/style.css": "assets/css/style.css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js/main.js": "assets/js/main.js" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/js/admin.js": "assets/js/admin.js" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {

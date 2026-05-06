@@ -8,7 +8,7 @@ permalink: /index.html
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
-        {% image "./src/assets/img/hero.jpg", "A luxurious, crystal-clear infinity pool overlooking the turquoise waters of the Zanzibar coast at sunset.", "100vw", "eager", "high" %}
+        {% image "./src/assets/img/hero.jpg", "A luxurious, crystal-clear infinity pool overlooking the turquoise waters of the Zanzibar coast at sunset.", "100vw", "eager", "high", "absolute inset-0 w-full h-full object-cover" %}
         <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-10 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -61,7 +61,7 @@ permalink: /index.html
 </section>
 
 <!-- About Section -->
-<section class="py-24 bg-sky-50">
+<section class="py-24 bg-sky-50" id="services">
     <div class="max-w-7xl mx-auto px-10">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div class="md:col-span-8 bg-white p-12 rounded-3xl border border-sky-100 shadow-sm flex flex-col justify-between">
@@ -90,7 +90,7 @@ permalink: /index.html
 </section>
 
 <!-- Pricing Section -->
-<section class="py-24 bg-white">
+<section class="py-24 bg-white" id="pricing">
     <div class="max-w-7xl mx-auto px-10 text-center space-y-4 mb-16">
         <h2 class="text-4xl font-bold text-sky-900">Transparent Maintenance Plans</h2>
         <p class="text-lg text-slate-700">Pristine results, tailored to your pool's specific needs.</p>
