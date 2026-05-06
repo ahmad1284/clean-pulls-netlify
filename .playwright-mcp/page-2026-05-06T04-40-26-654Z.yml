@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]: Clean Pulls
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: "#"
+        - link "Services" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+        - link "Pricing" [ref=e8] [cursor=pointer]:
+          - /url: "#"
+        - link "Contact" [ref=e9] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e10]:
+        - button "Admin Login" [ref=e11] [cursor=pointer]
+        - button "Book Now" [ref=e12] [cursor=pointer]
+  - generic [ref=e13]:
+    - img "A luxurious, crystal-clear infinity pool overlooking the turquoise waters of the Zanzibar coast at sunset. The scene is illuminated by soft, golden light reflecting off the ripples in the water. The surrounding deck is made of white coral stone, creating a bright and pristine light-mode aesthetic. The composition is wide and cinematic, capturing the peaceful essence of island living and professional maintenance." [ref=e15]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]: location_on
+          - text: Kiembe Samaki, Zanzibar
+        - heading "Pristine Pools, Island Living." [level=1] [ref=e21]
+        - paragraph [ref=e22]: Experience the tranquility of a perfectly balanced pool. Clean Pulls delivers professional maintenance tailored to the unique climate of Zanzibar.
+        - generic [ref=e23]:
+          - button "Book Your Cleaning" [ref=e24] [cursor=pointer]
+          - button "View Our Work" [ref=e25] [cursor=pointer]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e30]: water_drop
+          - generic [ref=e31]:
+            - heading "Water Quality" [level=3] [ref=e32]
+            - paragraph [ref=e33]: Real-time balancing
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36]: pH Balance
+            - generic [ref=e37]: 7.4 pH
+          - generic [ref=e40]:
+            - generic [ref=e41]: Chlorine
+            - generic [ref=e42]: 2.5 ppm
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - heading "Deeply Rooted in Kiembe Samaki" [level=2] [ref=e50]
+        - paragraph [ref=e51]: We aren't just a service provider; we are part of the Zanzibar fabric. Clean Pulls was founded on the principle of providing reliable, professional jobs for our local community while maintaining the highest international standards for our island's luxury villas and residences.
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: 100%
+          - generic [ref=e55]: Local Team
+        - generic [ref=e56]:
+          - generic [ref=e57]: 24h
+          - generic [ref=e58]: Response Time
+    - img "A professional pool technician in a clean white uniform carefully testing water samples next to a shimmering blue pool in a lush Zanzibar garden. Sunlight filters through palm leaves, creating dappled shadows on the stone deck. The atmosphere is one of meticulous care and technical expertise, with a palette of vibrant tropical greens and deep pool blues." [ref=e60]
+  - generic [ref=e61]:
+    - generic [ref=e62]:
+      - heading "Transparent Maintenance Plans" [level=2] [ref=e63]
+      - paragraph [ref=e64]: Pristine results, tailored to your pool's specific needs.
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]: Basic Splash
+        - generic [ref=e68]: $49/mo
+        - list [ref=e69]:
+          - listitem [ref=e70]:
+            - generic [ref=e71]: check_circle
+            - text: Bi-weekly surface skimming
+          - listitem [ref=e72]:
+            - generic [ref=e73]: check_circle
+            - text: Filter basket cleaning
+          - listitem [ref=e74]:
+            - generic [ref=e75]: check_circle
+            - text: Basic chemical testing
+        - button "Get Started" [ref=e76] [cursor=pointer]
+      - generic [ref=e77]:
+        - generic [ref=e78]: MOST POPULAR
+        - generic [ref=e79]: Deep Dive
+        - generic [ref=e80]: $89/mo
+        - list [ref=e81]:
+          - listitem [ref=e82]:
+            - generic [ref=e83]: check_circle
+            - text: Weekly full-service cleaning
+          - listitem [ref=e84]:
+            - generic [ref=e85]: check_circle
+            - text: Wall & floor scrubbing
+          - listitem [ref=e86]:
+            - generic [ref=e87]: check_circle
+            - text: Premium chemical balancing
+          - listitem [ref=e88]:
+            - generic [ref=e89]: check_circle
+            - text: Monthly pump inspection
+        - button "Select Plan" [ref=e90] [cursor=pointer]
+      - generic [ref=e91]:
+        - generic [ref=e92]: Premium Maintenance
+        - generic [ref=e93]: $149/mo
+        - list [ref=e94]:
+          - listitem [ref=e95]:
+            - generic [ref=e96]: check_circle
+            - text: 3x Weekly comprehensive cleaning
+          - listitem [ref=e97]:
+            - generic [ref=e98]: check_circle
+            - text: Priority emergency support
+          - listitem [ref=e99]:
+            - generic [ref=e100]: check_circle
+            - text: Equipment repair discounts
+          - listitem [ref=e101]:
+            - generic [ref=e102]: check_circle
+            - text: Saltwater cell optimization
+        - button "Get Premium" [ref=e103] [cursor=pointer]
+  - generic [ref=e104]:
+    - img "Close up of crystal clear pool water with light dancing on the bottom tiles. The surface is perfectly still, reflecting the bright afternoon sun in Zanzibar. The aesthetic is clean and refreshing with a dominant palette of deep navy and bright sky blue, symbolizing premium quality and professional results." [ref=e107]
+    - generic [ref=e109]:
+      - heading "Keep your pool crystal clear." [level=2] [ref=e110]
+      - paragraph [ref=e111]: Join dozens of villas in Zanzibar that trust Clean Pulls for daily, weekly, and monthly maintenance. Let us handle the chemistry while you enjoy the water.
+      - generic [ref=e112]:
+        - button "Schedule Inspection" [ref=e113] [cursor=pointer]
+        - generic [ref=e119]: Trusted by 50+ local villas
+  - contentinfo [ref=e120]:
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - generic [ref=e123]: Clean Pulls
+        - paragraph [ref=e124]: Pristine Professionalism for Zanzibar's finest swimming pools. Located in the heart of Kiembe Samaki.
+        - generic [ref=e125]:
+          - link "social_leaderboard" [ref=e126] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e127]: social_leaderboard
+          - link "camera" [ref=e128] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e129]: camera
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e132]: Navigation
+          - list [ref=e133]:
+            - listitem [ref=e134]:
+              - link "Privacy Policy" [ref=e135] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e136]:
+              - link "Terms of Service" [ref=e137] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e138]:
+              - link "Pool Maintenance Guide" [ref=e139] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e140]:
+              - link "Location" [ref=e141] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e142]:
+          - generic [ref=e143]: Our Location
+          - img "A stylized map placeholder showing the island of Zanzibar with a distinct marker on Kiembe Samaki. The map is designed with a dark, professional aesthetic using deep blues and slate grays to match the footer. The location is clearly highlighted with a subtle glowing pulse effect to indicate the headquarters of Clean Pulls." [ref=e145]
+          - paragraph [ref=e146]: Kiembe Samaki Main Rd, Zanzibar, TZ
+    - generic [ref=e147]: © 2024 Clean Pulls Zanzibar. Pristine Professionalism.
